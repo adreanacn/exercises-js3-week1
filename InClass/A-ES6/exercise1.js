@@ -19,12 +19,18 @@ function combineArrays(arr1, arr2) {
   return arr1.concat(arr2);
 }
 
+const combineArraysL = (arr1, arr2) => [...arr1, arr2]
+
 //use destructuring to return the object's cyf property
 function destructuring(obj) {
   return obj.cyf;
 }
 
+let combineArraysL = (arr1, arr2) => [...arr1, arr2]
+
 // use template literal to return a string with the sum of a and b
 function templateString(a, b) {
   return "The sum is equal to " + (a + b).toString();
 }
+
+const templateString = (a, b) => `The sum is equal to ${a + b}.toString()`;  
