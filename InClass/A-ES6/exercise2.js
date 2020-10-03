@@ -1,17 +1,21 @@
 class Polygon {
-  constructor(height, width) {
-    this.name = "Polygon";
+  constructor(name = "Polygon", height, width) {
+    this.name = name;
     this.height = height;
     this.width = width;
   }
   sayName() {
     console.log('Hi, I am a ' + this.name);
   }
+
+  calculateArea() {
+    return this.height * this.width;
+  }
 }
 
 let p = new Polygon('Polygon', 300, 400);
 p.sayName();
-console.log('The area of this polygon is ' + p.area);
+console.log('The area of this polygon is ' + p.calculateArea());
 
 
 class Rectangle extends Polygon {
@@ -21,7 +25,7 @@ class Rectangle extends Polygon {
     this.sides = 4;
     //this.area = this.height * this.width;
   }
-  get area() {return this.width * this.height;}
+  get area() { return this.width * this.height; }
   sayName() {
     console.log('Hi I am a polygon and my name is ' + this.name + '.');
   }
